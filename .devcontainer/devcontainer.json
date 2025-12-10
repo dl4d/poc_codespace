@@ -1,4 +1,5 @@
 {
-    "name": "first_project_devcontainer",
-    "image": "python:3.11-slim"
+    "name"                 : "first_project_devcontainer",
+    "image"                : "python:3.11-slim",
+    "updateContentCommand" : "bash .devcontainer/install-tools.sh"
 }
