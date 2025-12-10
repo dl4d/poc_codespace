@@ -1,5 +1,25 @@
 {
-    "name"                 : "first_project_devcontainer",
-    "image"                : "python:3.11-slim",
-    "updateContentCommand" : "bash .devcontainer/install-tools.sh"
+  "name": "projet_volumetest",
+
+  "image": "python:3.11-slim",
+
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces,type=bind",
+  "workspaceFolder": "/workspaces",
+
+  // Ajout de l'utilisateur "devuser" via la feature common utilities
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "username": "devuser",
+      "userUid": "1000",
+      "userGid": "1000"
+    }
+  },
+  // On indique que l'utilisateur par défaut sera "devuser"
+  "remoteUser": "devuser",
+
+    "mounts": [
+
+    // On crée un volume nommé 'pip-cache-vol' pour stocker les cache de pip
+    "source=pip-home-devuser,target=/home/devuser/,type=volume"
+  ]
 }
