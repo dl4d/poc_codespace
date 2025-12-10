@@ -1,0 +1,4 @@
+{
+    "name": "first_project_devcontainer",
+    "image": "python:3.11-slim"
+}
