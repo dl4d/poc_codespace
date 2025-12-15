@@ -21,7 +21,5 @@
 
     // On crée un volume nommé 'pip-cache-vol' pour stocker les cache de pip
     "source=pip-home-devuser,target=/home/devuser/,type=volume"
-  ],
-
-  "updateContentCommand" : "bash .devcontainer/install-tools.sh"
+  ]
 }
